@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mysample"
+        android:checkable="false"
+        android:enabled="true"
+        android:title="@string/add_sample_vacations"
+        android:visible="true" />
+    <item
+        android:id="@+id/clear_data"
+        android:enabled="true"
+        android:title="Clear All Data (DEV ONLY)"
+        android:visible="false"/>
+</menu>

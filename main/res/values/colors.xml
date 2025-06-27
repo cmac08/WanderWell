@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main colors -->
+    <color name="primary">#4DB6AC</color>          <!-- Soft teal (relaxing) -->
+    <color name="onPrimary">#FFFFFF</color>         <!-- White text on teal -->
+    <color name="cardBackgroundVacation">#FFF8E1</color> <!-- Light Sandy Color -->
+    <color name="cardTextVacation">#37474F</color>        <!-- Deep Grey-Blue (easy to read) -->
+    <color name="cardButtonTextVacation">#004D40</color>  <!-- Fresh Teal for Edit/Delete -->
+    <color name="buttonIconTint">#1B5E20</color> <!-- Dark Green Tint for icons -->
+
+    <!-- Error / Alerts -->
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+
+    <!--    Secondary Colors-->
+    <color name="secondary">#FFB74D</color>         <!-- Light orange (fun accent) -->
+    <color name="onSecondary">#000000</color>       <!-- Black text on orange -->
+
+    <!-- Background and surfaces -->
+    <color name="surface">#FAFAFA</color>        <!-- Very light gray (almost white) -->
+<!--    <color name="surface">#FFFFFF</color>            &lt;!&ndash; Pure white for cards &ndash;&gt;-->
+    <color name="onSurface">#333333</color>         <!-- Deep gray text for readability -->
+
+    <!-- Additional accents -->
+    <color name="tertiary">#64B5F6</color>          <!-- Sky blue  -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="teal_700">#018786</color>              <!--teal -->
+
+</resources>

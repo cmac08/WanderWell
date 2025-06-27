@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">WanderWell</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="channel_name">my_notification_channel</string>
+    <string name="channel_description">notification_channel_description</string>
+    <string name="appName">WanderWell</string>
+    <string name="enterBtnText">Enter</string>
+    <string name="contentDescriptionMain">Main App Page</string>
+    <string name="generate_report">Generate Report</string>
+    <string name="add_sample_vacations">Add Sample Vacations</string>
+    <string name="save_vacation">Save Vacation</string>
+    <string name="delete_vacation">Delete Vacation</string>
+    <string name="add_excursion">Add Excursion</string>
+    <string name="alert_start">Set Vacation Start Reminder</string>
+    <string name="alert_end">Set Vacation End Reminder</string>
+    <string name="alert_full">Set Start and End Reminder</string>
+    <string name="share">Share</string>
+    <string name="share_note">Share Note</string>
+    <string name="set_notification">Set Notification</string>
+    <string name="save_excursion">Save Excursion</string>
+    <string name="no_excursions_yet">No excursions yet.</string>
+    <string name="no_vacation_name">No Vacation Name</string>
+    <string name="add_vacation">Add Vacation</string>
+    <string name="edit_excursion">Edit Excursion</string>
+    <string name="delete_excursion">Delete Excursion</string>
+    <string name="add_vacations">Add Vacations</string>
+    <string name="search_vacations_or_excursions">Search vacations or excursions</string>
+    <string name="no_vacations_yet">No Vacations Yet</string>
+
+
+</resources>

@@ -1,0 +1,73 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="?attr/colorSurfaceVariant"
+    app:cardBackgroundColor="@color/cardBackgroundVacation"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:fitsSystemWindows="true">
+
+        <!-- Vacation Name -->
+        <TextView
+            android:id="@+id/vacationDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vacation Name"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="@color/cardTextVacation"
+            android:paddingBottom="4dp"/>
+
+        <!-- Vacation Date Range (new) -->
+        <TextView
+            android:id="@+id/textViewVacationDateRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vacation: MM/DD/YYYY - MM/DD/YYYY"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="@color/cardTextVacation"
+            android:paddingBottom="8dp"/>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit Vacation"
+                android:padding="4dp"
+                app:tint="@color/buttonIconTint"
+                app:srcCompat="@drawable/edit_pencil" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/delete_vacation"
+                android:padding="4dp"
+                app:tint="@color/buttonIconTint"
+                app:srcCompat="@drawable/delete_trash_can" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

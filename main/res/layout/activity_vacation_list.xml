@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vacationListRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.VacationList">
+
+    <!-- AppBarLayout with SearchBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:navigationIcon="@drawable/search_24"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- RecyclerView that scrolls under the AppBar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layoutAnimation="@anim/layout_fade_in"
+        app:layout_behavior="@string/searchbar_scrolling_view_behavior"
+        tools:listitem="@layout/vacation_list_item" />
+
+    <!-- No Vacations Message centered -->
+    <TextView
+        android:id="@+id/noVacationsMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_vacations_yet"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnBackground"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_anchor="@id/recyclerView"
+        app:layout_anchorGravity="center" />
+
+    <!-- FloatingActionButton anchored bottom end -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_vacation"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="?attr/colorOnPrimaryContainer"
+        app:layout_anchor="@id/recyclerView"
+        app:layout_anchorGravity="bottom|end" />
+
+    <!-- SearchView overlay anchored to SearchBar -->
+    <com.google.android.material.search.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        app:layout_anchor="@id/searchBar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

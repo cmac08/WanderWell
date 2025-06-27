@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/save_vacation"
+        android:id="@+id/vacation_save"/>
+    <item android:title="@string/delete_vacation"
+        android:id="@+id/vacation_delete"/>
+    <item android:title="@string/add_excursion"
+        android:id="@+id/add_Excursion"/>
+    <item android:title="@string/alert_start"
+        android:id="@+id/alertstart"/>
+    <item android:title="@string/alert_end"
+        android:id="@+id/alertend"/>
+    <item android:title="@string/alert_full"
+        android:id="@+id/alertfull"/>
+    <item android:title="@string/share"
+        android:id="@+id/share"/>
+</menu>

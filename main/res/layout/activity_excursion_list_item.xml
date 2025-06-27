@@ -1,0 +1,85 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="?attr/colorSurfaceVariant"
+    app:cardBackgroundColor="?attr/colorSurface"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Excursion Name -->
+        <TextView
+            android:id="@+id/textViewExcursionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Excursion Name"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="?android:attr/textColorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonEditExcursion"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- Excursion Date -->
+        <TextView
+            android:id="@+id/textViewExcursionDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Excursion Date"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="@color/cardTextVacation"
+            app:tint="@color/buttonIconTint"
+            app:layout_constraintTop_toBottomOf="@id/textViewExcursionName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonEditExcursion"
+            android:layout_marginTop="4dp" />
+
+        <!-- Vacation Date Range -->
+<!--        <TextView-->
+<!--            android:id="@+id/textViewVacationDateRange"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Vacation: MM/DD/YYYY - MM/DD/YYYY"-->
+<!--            android:textAppearance="?attr/textAppearanceBodySmall"-->
+<!--            android:textColor="@color/cardTextVacation"-->
+<!--            android:paddingBottom="8dp"/>-->
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/buttonEditExcursion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_excursion"
+            android:padding="4dp"
+            app:tint="@color/buttonIconTint"
+            app:srcCompat="@drawable/edit_pencil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/buttonDeleteExcursion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_excursion"
+            android:padding="4dp"
+            app:tint="@color/buttonIconTint"
+            app:srcCompat="@drawable/delete_trash_can"
+            app:layout_constraintTop_toBottomOf="@id/buttonEditExcursion"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
