@@ -68,6 +68,30 @@ public class VacationList extends AppCompatActivity {
         // Other setup...
         repository = new Repository(getApplication());
         setupViewModel();
+
+        // Setup adapter for search results shown in the SearchView
+        adapter = new SearchResultAdapter(result -> {
+            Intent intent;
+            if ("Vacation".equalsIgnoreCase(result.getType())) {
+                intent = new Intent(this, VacationDetails.class);
+                intent.putExtra("vacationId", result.getId());
+            } else if ("Excursion".equalsIgnoreCase(result.getType())) {
+                intent = new Intent(this, ExcursionDetails.class);
+                intent.putExtra("excursionId", result.getId());
+            } else {
+                return;
+            }
+            startActivity(intent);
+        });
+
+        RecyclerView searchRecyclerView = searchView.getRecyclerView();
+        searchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        searchRecyclerView.setAdapter(adapter);
+
+        // Optional built-in behavior linking SearchBar and SearchView
+        searchView.setupWithSearchBar(searchBar);
+
+        setupSearchBar();
         loadVacationsAsync();
     }
 //    @Override
