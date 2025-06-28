@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:navigationIcon="@drawable/search_24"/>
+            app:navigationIcon="@drawable/search_24"
+            app:menu="@menu/menu_vacation_list"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- RecyclerView that scrolls under the AppBar -->
