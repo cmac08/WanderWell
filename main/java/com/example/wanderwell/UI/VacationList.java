@@ -54,6 +54,7 @@ public class VacationList extends AppCompatActivity {
         noVacationsMessage = findViewById(R.id.noVacationsMessage);
         searchBar = findViewById(R.id.searchBar);
         searchBar.setVisibility(View.VISIBLE);
+        searchBar.inflateMenu(R.menu.menu_vacation_list);
 
         searchView = findViewById(R.id.searchView);
 
@@ -68,6 +69,30 @@ public class VacationList extends AppCompatActivity {
         // Other setup...
         repository = new Repository(getApplication());
         setupViewModel();
+
+        // Setup adapter for search results shown in the SearchView
+        adapter = new SearchResultAdapter(result -> {
+            Intent intent;
+            if ("Vacation".equalsIgnoreCase(result.getType())) {
+                intent = new Intent(this, VacationDetails.class);
+                intent.putExtra("vacationId", result.getId());
+            } else if ("Excursion".equalsIgnoreCase(result.getType())) {
+                intent = new Intent(this, ExcursionDetails.class);
+                intent.putExtra("excursionId", result.getId());
+            } else {
+                return;
+            }
+            startActivity(intent);
+        });
+
+        RecyclerView searchRecyclerView = searchView.getRecyclerView();
+        searchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        searchRecyclerView.setAdapter(adapter);
+
+        // Optional built-in behavior linking SearchBar and SearchView
+        searchView.setupWithSearchBar(searchBar);
+
+        setupSearchBar();
         loadVacationsAsync();
     }
 //    @Override
@@ -217,14 +242,8 @@ public class VacationList extends AppCompatActivity {
         });
     }
     private void setupSearchBar() {
-        // This connects the SearchBar toggle behavior with SearchView visibility
-        searchBar.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.searchBar) {
-                searchView.show(); // show search view when menu item is clicked
-                return true;
-            }
-            return false;
-        });
+        // Forward SearchBar menu selections to the existing handler
+        searchBar.setOnMenuItemClickListener(this::onOptionsItemSelected);
 
         searchView.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
